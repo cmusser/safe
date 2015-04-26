@@ -1,0 +1,58 @@
+These are described in this order <widget> -> controller -> model
+
+ 1. The file popup menu button keeps a list of available password files
+    by being bound to an array of filenames maintained by the app delegate.
+
+    - popup (NSPopupButton, in XIB)
+        Value Selection:
+            Content
+                Bind to: PwListController
+                Controller Key: arranged object
+                Model Key Path: <blank>
+            Content Values
+                Bind to: PwListController (an NSArrayController)
+                Controller Key: arranged object
+                Model Key Path: <blank>
+
+            Not sure why (or if) both of these must be bound.
+ 
+    - PwListController  (NSArrayController, in XIB)
+        Controller Content
+            Content Array
+                Bind To: App Delegate
+                Controller Key: <blank>
+                Model Key Path: pwFiles
+ 
+    - pwFiles (NSArray, in App Delegate)
+        Contains password filenames. This is created when the application
+        finishes launching. It could be updated at runtime as the directory
+        contents changes.
+
+ 2. The edit fields observe the currently selected credential and the editing
+    flag.
+
+    - fields (NSTextFields, in XIB)
+        Value
+            Value
+                Bind To: CredentialUserController
+                Controller Key: selection
+                Model Key Path: user, url (respectively)
+        Availability
+            Enabled
+                Bind To: EditingController
+                Controller Key: <blank>
+                Model Key Path: editable
+
+    - CredentialController (NSObjectController, in XIB)
+        Controller Content
+            Content Object
+                Bind To: App Delegate
+                Controller Key: <blank>
+                Model Key Path: curCredential
+ 
+    - EditingController (NSObjectController, in XIB)
+        Availability
+            Editable
+                Bind To: App Delegate
+                Controller Key: <blank>
+                Model Key Path: editing

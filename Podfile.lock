@@ -1,0 +1,13 @@
+PODS:
+  - libsodium (1.0.1)
+  - NAChloride (1.1.2):
+    - libsodium
+
+DEPENDENCIES:
+  - NAChloride
+
+SPEC CHECKSUMS:
+  libsodium: ac34cc59b942350fb1377380cfb31f05c3d6170e
+  NAChloride: f5ec84c64efcdb5008f960d7d557dfac6c060a1d
+
+COCOAPODS: 0.35.0
