@@ -60,8 +60,8 @@
 		13A44E471ABC7331004BD52A /* get_time_monotonic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = get_time_monotonic.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		13BD8EE41A8DC76A00147BCD /* NCRAutocompleteTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCRAutocompleteTextView.h; sourceTree = "<group>"; };
 		13BD8EE51A8DC76A00147BCD /* NCRAutocompleteTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NCRAutocompleteTextView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		13BD8EE71A8E64A200147BCD /* CredentialFileDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = CredentialFileDb.h; path = ../CredentialFileDb.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		13BD8EE81A8E64A200147BCD /* CredentialFileDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = CredentialFileDb.m; path = ../CredentialFileDb.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		13BD8EE71A8E64A200147BCD /* CredentialFileDb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CredentialFileDb.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		13BD8EE81A8E64A200147BCD /* CredentialFileDb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CredentialFileDb.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		13C0D9931A941E5A00A27080 /* SFBorderlessWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SFBorderlessWindow.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		13C0D9941A941E5A00A27080 /* SFBorderlessWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SFBorderlessWindow.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		38B5E81EDFE649A5C1E005C0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +170,7 @@
 				1358E5291A8C10DB00110D8F /* DDHotKeyUtilities.m */,
 			);
 			name = DDHotKey;
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		13BD8EE31A8DC72200147BCD /* NCRAutocompleteTextView */ = {
@@ -179,6 +180,7 @@
 				13BD8EE51A8DC76A00147BCD /* NCRAutocompleteTextView.m */,
 			);
 			name = NCRAutocompleteTextView;
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		8A1E954ABC275F7B95530E5A /* Frameworks */ = {
