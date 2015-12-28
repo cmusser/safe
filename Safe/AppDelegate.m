@@ -11,6 +11,7 @@
 #import "DDHotKeyCenter.h"
 #import "NAChloride.h"
 #import "SFBorderlessWindow.h"
+#import "SFTabExitTextField.h"
 #import "CredentialFileDb.h"
 
 #import "get_time_monotonic.h"
@@ -44,8 +45,8 @@
 @property (weak) IBOutlet NSButton *curCredentialPwRegenButton;
 @property (weak) IBOutlet NSButton *curCredentialDeleteButton;
 
-@property (weak) IBOutlet NSTextField *curCredentialUserTextField;
-@property (weak) IBOutlet NSTextField *curCredentialUrlTextField;
+@property (weak) IBOutlet SFTabExitTextField *curCredentialUserTextField;
+@property (weak) IBOutlet SFTabExitTextField *curCredentialUrlTextField;
 
 @property (weak) IBOutlet NSButton *editOrCancelButton;
 @property (weak) IBOutlet NSButton *createOrOkButton;
@@ -132,6 +133,10 @@ NSColor *_greenBg;
     
     self.lookupTextField.delegate = self;
     [self.lookupTextField setFont:[NSFont systemFontOfSize:30.0]];
+
+    self.curCredentialUserTextField.exitTarget = self.lookupTextField;
+    self.curCredentialUrlTextField.exitTarget = self.lookupTextField;
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		130EB54C1A9FC3DA00B1E815 /* bindings.txt in Resources */ = {isa = PBXBuildFile; fileRef = 130EB54B1A9FC3DA00B1E815 /* bindings.txt */; };
+		133BB09D1C31CAA6002F8D72 /* SFTabExitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 133BB09C1C31CAA6002F8D72 /* SFTabExitTextField.m */; };
 		1358E5041A8BF81500110D8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1358E5031A8BF81500110D8F /* AppDelegate.m */; };
 		1358E5061A8BF81500110D8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1358E5051A8BF81500110D8F /* main.m */; };
 		1358E5081A8BF81500110D8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1358E5071A8BF81500110D8F /* Images.xcassets */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		130EB54B1A9FC3DA00B1E815 /* bindings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bindings.txt; sourceTree = "<group>"; };
+		133BB09B1C31CAA6002F8D72 /* SFTabExitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFTabExitTextField.h; sourceTree = "<group>"; };
+		133BB09C1C31CAA6002F8D72 /* SFTabExitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFTabExitTextField.m; sourceTree = "<group>"; };
 		1358E4FD1A8BF81500110D8F /* Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Safe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1358E5011A8BF81500110D8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1358E5021A8BF81500110D8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -121,6 +124,8 @@
 				13BD8EE81A8E64A200147BCD /* CredentialFileDb.m */,
 				13C0D9931A941E5A00A27080 /* SFBorderlessWindow.h */,
 				13C0D9941A941E5A00A27080 /* SFBorderlessWindow.m */,
+				133BB09B1C31CAA6002F8D72 /* SFTabExitTextField.h */,
+				133BB09C1C31CAA6002F8D72 /* SFTabExitTextField.m */,
 				1358E5071A8BF81500110D8F /* Images.xcassets */,
 				1358E5091A8BF81500110D8F /* MainMenu.xib */,
 				1358E5001A8BF81500110D8F /* Supporting Files */,
@@ -246,7 +251,7 @@
 		1358E4F51A8BF81500110D8F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Chuck Musser";
 				TargetAttributes = {
 					1358E4FC1A8BF81500110D8F = {
@@ -337,6 +342,7 @@
 			files = (
 				1358E5061A8BF81500110D8F /* main.m in Sources */,
 				1358E52A1A8C10DB00110D8F /* DDHotKeyCenter.m in Sources */,
+				133BB09D1C31CAA6002F8D72 /* SFTabExitTextField.m in Sources */,
 				1358E52C1A8C10DB00110D8F /* DDHotKeyUtilities.m in Sources */,
 				13C0D9951A941E5B00A27080 /* SFBorderlessWindow.m in Sources */,
 				1358E5041A8BF81500110D8F /* AppDelegate.m in Sources */,
@@ -398,6 +404,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -462,6 +469,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Safe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.subindustrious.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Safe;
 			};
 			name = Debug;
@@ -474,6 +482,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Safe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.subindustrious.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Safe;
 			};
 			name = Release;
@@ -493,6 +502,7 @@
 				);
 				INFOPLIST_FILE = SafeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.subindustrious.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SafeTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Safe.app/Contents/MacOS/Safe";
 			};
@@ -509,6 +519,7 @@
 				);
 				INFOPLIST_FILE = SafeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.subindustrious.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SafeTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Safe.app/Contents/MacOS/Safe";
 			};
