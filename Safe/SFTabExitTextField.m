@@ -13,7 +13,7 @@
 - (void)keyUp:(NSEvent *)theEvent {
     
     if (self.editable)
-        [super keyDown:theEvent];
+        [super keyUp:theEvent];
     else
         [_window makeFirstResponder:self.exitTarget];
 }

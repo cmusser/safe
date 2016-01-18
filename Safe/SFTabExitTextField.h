@@ -10,6 +10,6 @@
 
 @interface SFTabExitTextField : NSTextField
 
-@property (strong, nonatomic) NSObject *exitTarget;
+@property (strong, nonatomic) NSResponder *exitTarget;
 
 @end
