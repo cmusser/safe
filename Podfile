@@ -1,1 +1,3 @@
-pod "NAChloride"
+target "Safe" do
+  pod "NAChloride"
+end
